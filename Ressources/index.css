@@ -52,6 +52,7 @@ nav a:visited {
 
 /* BLOCK présentation */
 
+
 #firstname {
     display: flex;
     justify-content: center;
@@ -63,15 +64,53 @@ nav a:visited {
     
 }
 
+/* PHOTO PERSO*/
+.card {
+    margin: 30px auto 0;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 40px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+.card-face-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-face-back {
+    transform: rotateY(180deg);
+}
 .mainname{
     padding-top: 10%;
     font-size: 6rem;
     text-transform: uppercase;
     letter-spacing: 0.125rem;
     font-weight: 300;
+    text-align: center;
 }
 
-/* PHOTO PERSO*/
+
 
 .roundbox {
     height: 200px;
@@ -304,3 +343,154 @@ nav a:visited {
     margin: 10px 0;
   }
 }
+
+
+/* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*//* WORK*/
+h2 {
+    padding-top: 70px;
+    font-size: 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+h2::before,
+h2::after {
+    background-color: #DBE8D4;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+h2::after{
+    left: 0.5em;
+    margin-right: -50%;
+}
+h2::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.work-grid {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    margin: auto;
+    gap: 70px;
+  }
+  .work-grid .work-item {
+    position: relative;
+    width: 368px;
+    height: 368px;
+    background: #000;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-top: 45px;
+    border-radius: 5%;
+    
+  }
+  .work-grid:hover .work-item {
+    transform: rotateY(25deg);
+  }
+  .work-grid .work-item:hover ~ .work-item {
+    transform: rotateY(-25deg);
+  }
+  .work-grid .work-item:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  }
+  .work-grid .work-item .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .work-grid .work-item .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(139deg, rgba(2,0,36,0.75) 0%, rgba(34,39,51,0.75) 100%, rgba(0,212,255,0.75) 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .work-grid .work-item:hover .imgBx:before {
+    opacity: 1;
+  }
+  .work-grid .work-item .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .work-grid .work-item .work-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+  .work-grid .work-item .work-info h3 {
+    color: #DBE8D4;
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 20px;
+    transform: translateY(200px);
+    transition-delay: 0.3s;
+  }
+  .work-grid .work-item:hover .work-info h3 {
+    transform: translateY(-50px);
+  }
+  .work-grid .work-item .work-info p {
+    color: #DBE8D4;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translateY(200px);
+    transition-delay: 0.4s;
+  }
+  .work-grid .work-item:hover .work-info p {
+    transform: translateY(0px);
+  } 
+  .work-grid .work-item .work-info a {
+    color: #DBE8D4;
+    transition: 0.5s;
+    margin-bottom: 5px;
+    font-size: 40px;
+    transform: translateY(400px);
+    transition-delay: 0.3s;
+  }
+  .work-grid .work-item:hover .work-info a {
+    transform: translate(150px, 150px);
+    height: 100%;
+    width: fit-content;
+  }
+
+  @media(max-width: 440px) {
+    .work-grid {
+        flex-direction: column;
+    }
+  }
+
+  #contact {
+    padding-top: 200px;
+  }

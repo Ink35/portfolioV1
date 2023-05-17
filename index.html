@@ -16,16 +16,26 @@
         <ul>
             <li><a href="#firstname">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li>Work</li>
+            <li><a href="#work">Work</a></li>
             <li>Contact</li>
         </ul>
     </nav>
     <Header>
         <div id="firstname">
             <h1 class="mainname">CORMIER Antoine</h1>
-            <img class="roundbox" src="./Ressources/Images/fotor-ai-202305161167.jpg" alt="Cormier Antoine">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-face card-face-front"> 
+                        <img title="click to unleash the monster" class="roundbox" src="./Ressources/Images/fotor-ai-202305161167.jpg" alt="Cormier Antoine">
+                    </div>
+                    <div class="card-face card-face-back">
+                        <img class="roundbox" src="./Ressources/Images/Antoine 2.jpg" alt="Cormier Antoine">
+                    </div>
+                </div>
+            </div>
+           
             <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-            <h2 id="loading">Loading Web Dev</h2>  
+            <h3 id="loading">Loading Web Dev</h3>  
             <div id="about">
                 <p>Pendant plus de 13 ans, j'ai eu la chance d'évoluer dans un lieu culturel, après l'avoir aidé a muté et après avoir passé 13 ans de ma vie a vivre de nuit, j'ai décidé de changé d'horizons.</p>
                 <p>Passionnée d'informatique et d'internet depuis mon plus jeune age, mon choix de ré-orientation c'est naturellement tourné vers les metiers de l'informatique</p>
@@ -33,8 +43,10 @@
             </div>
         </div >
       
-    </Header>
-    <div class="wrapper" id="experience">
+    </Header>  
+    <h2 id="experience">Experience</h2>
+    <div class="wrapper" >
+      
         <div class="center-line">
           <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
         </div>
@@ -125,11 +137,40 @@
       </div>
     <div id="work">
         <h2>My Work</h2>
-        <div class="flexbox">
-            <div class="job-item">
-                
+        <div class="work-grid">
+            <div class="work-item">
+                <div class="imgBx">
+                    <img src="./Ressources/Images/Github.PNG" alt="Githbub Repository">
+                </div>
+                <div class="work-info">
+                    <a href="https://github.com/Ink35?tab=repositories" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <h3>My Github Repository</h3>
+                    <p>UI, Frontend HTML CSS JS</p>
+                </div>    
+            </div>
+            <div class="work-item">
+                <div class="imgBx">
+                    <img src="./Ressources/Images/paranoiak website.PNG" alt="Paranoïak Website">
+                </div>
+                <div class="work-info">
+                    <a href="file:///C:/Users/night/OneDrive/Bureau/Codecademy/Projects/Company%20Home%20Page/index.html" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <h3>Paranoïak</h3>
+                    <p>UI, Frontend HTML CSS</p>
+                </div>    
+            </div>
+            <div class="work-item">
+                <div class="imgBx">
+                    <img src="./Ressources/Images/Airbnb.PNG" alt="AIRBNB Site">
+                </div>
+                <div class="work-info">
+                    <a href="https://www.airbnb.fr/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <h3>Airbnb</h3>
+                    <p>A lot of stuff probably</p>
+                </div>    
             </div>
         </div>
     </div>
+    <div id="contact"></div>
+    <script src="./Ressources/main.js"></script>
 </body>
 </html>
